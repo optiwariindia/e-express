@@ -1,0 +1,47 @@
+{
+    "Require Package": {
+        "prefix": "e-require-package",
+        "body": [
+          "const $1 = require(\"$1\")"
+        ],
+        "description": "require package"
+      },
+    "Return Primise":{
+        "prefix":"e-ret-promise",
+        "body":[
+          "return new Promise((resolve,reject)=>{$1})"
+        ],
+        "description": "Function returns promise"
+      },
+      "Express Router": {
+        "prefix": "e-exp-router",
+        "body": [
+          "const router = require(\"express\").Router();",
+          "$1",
+          "module.exports = router;"
+        ],
+        "description": "Express Router"
+      },
+      "API Endpoints": {
+        "prefix": "e-api",
+        "body": [
+          "router",
+          ".route('$1')",
+          ".get    (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".post   (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".put    (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".patch  (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".delete (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".copy   (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          "router",
+          ".route('$1/:id')",
+          ".get    (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".post   (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".put    (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".patch  (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".delete (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })",
+          ".copy   (async (req, res) => { return res.status(502).json({ status: \"success\", message: \"Not implemented\" }) })"
+        ],
+        "description": "API Endpoints"
+      }    
+}
